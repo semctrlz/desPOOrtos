@@ -1,0 +1,2 @@
+C:\dev\cpp\V2\desPOOrtos\Debug\desPOOrtos.exe
+C:\dev\cpp\V2\desPOOrtos\Debug\desPOOrtos.pdb
