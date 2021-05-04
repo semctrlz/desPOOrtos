@@ -19,6 +19,8 @@ public:
 	bool GetCategoriaProfissional();
 	float GetSalarioBruto();
 	float GetSalarioLiquido();
+	float GetInss();
+	float GetIrff();
 	string GetTempoParaAposentadoria();
 	string GetIdade();
 

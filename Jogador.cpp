@@ -45,30 +45,56 @@ float Jogador::GetSalarioBruto() {
 
 float Jogador::GetSalarioLiquido() {
 	float salario = this->salario_bruto;
-	float inss = 0.f;
-	float ir = 0.f;
+	float inss = GetInss();
+	float ir = GetIrff();	
+
+	return salario - inss - ir;
+}
+
+float Jogador::GetInss() {
+	float salario = this->salario_bruto;
+	float inss = 0.f;	
 
 	if (salario <= 1100.f) {
 		inss = salario * 0.075;
 	}
 	else if (salario <= 2000.f) {
-		inss = salario * 0.09f;
-		ir = salario * 0.075f;
+		inss = salario * 0.09f;		
 	}
 	else if (salario <= 3100.f) {
-		inss = salario * 0.12f;
-		ir = salario * 0.15f;
+		inss = salario * 0.12f;		
 	}
 	else if (salario <= 4100.f) {
-		inss = salario * 0.14f;
-		ir = salario * 0.22f;
+		inss = salario * 0.14f;		
 	}
 	else if (salario > 4100.f) {
-		inss = salario * 0.14f;
-		ir = salario * 0.27f;
+		inss = salario * 0.14f;		
 	}
 
-	return salario - inss - ir;
+	return inss;
+}
+
+float Jogador::GetIrff() {
+	float salario = this->salario_bruto;
+	float irff;
+
+	if (salario <= 1100.f) {
+		irff = 0;
+	}
+	else if (salario <= 2000.f) {
+		irff = salario * 0.075f;
+	}
+	else if (salario <= 3100.f) {
+		irff = salario * 0.15f;
+	}
+	else if (salario <= 4100.f) {
+		irff = salario * 0.22f;
+	}
+	else if (salario > 4100.f) {
+		irff = salario * 0.27f;
+	}
+
+	return irff;	
 }
 
 string Jogador::GetTempoParaAposentadoria() {
