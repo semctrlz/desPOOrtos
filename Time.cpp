@@ -18,6 +18,14 @@ void Time::AdicionaJogador(Jogador jogador) {
 			<< endl;		
 	}
 	else {
+		for (Jogador jogador_existente : this->jogadores) {
+			if (jogador_existente.GetMatricula() == jogador.GetMatricula())
+			{
+				cout << "O jogador " << jogador.GetNome() << " já está neste time." << endl;
+				return;
+			}
+		}
+
 		this->jogadores.push_back(jogador);		
 	}
 }
