@@ -151,7 +151,7 @@ string Jogador::GetTempoParaAposentadoria() {
 
 		if (dias - ((s_ano * 365) + s_mes * 30) > 0) {
 			s_dia = dias - ((s_ano * 365) + s_mes * 30);
-			if (s_mes > 0) {
+			if (s_mes > 0 || s_ano > 0) {
 				apos += " e ";
 			}
 			apos += to_string(s_dia);

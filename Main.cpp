@@ -10,13 +10,13 @@ int main() {
 
 	#pragma region Asci para deixar bonitinho
 
-		cout << "       _            ______  _____        _    _____      " << endl;
-		cout << "      | |           | ___ \\|  _  |      | |  |  _  |     " << endl;
-		cout << "    __| |  ___  ___ | |_/ /| | | | _ __ | |_ | | | | ___ " << endl;
-		cout << "   / _` | / _ \\/ __||  __/ | | | || '__|| __|| | | |/ __|" << endl;
-		cout << "  | (_| ||  __/\\__ \\| |    \\ \\_/ /| |   | |_ \\ \\_/ /\\__ \\" << endl;
-		cout << "   \\__,_| \\___||___/\\_|     \\___/ |_|    \\__| \\___/ |___/" << endl;
-		cout << "                                                         " << endl;
+	cout << "        _             _____    ____    ____         _              " << endl;
+	cout << "       | |           |  __ \\  / __ \\  / __ \\       | |             " << endl;
+	cout << "     __| |  ___  ___ | |__) || |  | || |  | | _ __ | |_  ___   ___ " << endl;
+	cout << "    / _` | / _ \\/ __||  ___/ | |  | || |  | || '__|| __|/ _ \\ / __|" << endl;
+	cout << "   | (_| ||  __/\\__ \\| |     | |__| || |__| || |   | |_| (_) |\\__ \\" << endl;
+	cout << "    \\__,_| \\___||___/|_|      \\____/  \\____/ |_|    \\__|\\___/ |___/" << endl;
+	cout << "                                                                   " << endl;	
 		Utils::PreencheTexto("=", 80);
 		cout << endl;
 
@@ -1057,7 +1057,7 @@ int main() {
 
 	#pragma region Adidiona Times
 
-	Time time_futebol_1("Time de fitebol 01", futebol);
+	Time time_futebol_1("Time de futebol 01", futebol);
 	time_futebol_1.AdicionaJogador(jogador_futebol_1);
 	time_futebol_1.AdicionaJogador(jogador_futebol_2);
 	time_futebol_1.AdicionaJogador(jogador_futebol_3);
@@ -1341,12 +1341,13 @@ int main() {
 
 
 	#pragma endregion
+			
+	//empresa_1.ListaJogadores();
 
 	empresa_1.RelatorioFinanceiro();
-
-
-	//cout << vagner_2.GetMatricula() <<  endl;
 	
+	cout << "\n\n\n";
+
 	system("pause");
 	return 0;
 }
